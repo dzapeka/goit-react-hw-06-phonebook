@@ -42,7 +42,7 @@ export const ContactForm = ({ onSubmit }) => {
           id={nameInputId}
           autoComplete="off"
           required
-          pattern="^[A-Za-z\- ']+$"
+          pattern="^[a-zA-Zа-яА-ЯїіІ'Ї\s]+$"
         />
       </label>
       <label htmlFor={numberInputId}>
