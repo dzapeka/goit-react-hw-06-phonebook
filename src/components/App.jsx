@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import { ContactForm } from 'components/ContactForm';
 import { Filter } from 'components/Filter';
 import { ContactList } from 'components/ContactList';
@@ -28,7 +27,7 @@ const App = () => {
       alert(`${name} is already in contacts.`);
       return;
     }
-    dispatch(addContact({ name, number, id: nanoid() }));
+    dispatch(addContact(name, number));
   };
 
   const onFilterChange = value => {
