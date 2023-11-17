@@ -1,11 +1,14 @@
 import { nanoid } from 'nanoid';
 import styles from './Filter.module.css';
+import { useDispatch } from 'react-redux';
+import { setFilter } from 'redux/contacts/contacts.reducer';
 
-export const Filter = ({ onFilterChange }) => {
+export const Filter = () => {
   const filterInputId = nanoid();
+  const dispatch = useDispatch();
 
   const handleChange = event => {
-    onFilterChange(event.target.value);
+    dispatch(setFilter(event.target.value));
   };
 
   return (
